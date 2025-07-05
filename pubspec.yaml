@@ -1,29 +1,39 @@
 name: parrot_downloader
-description: "Parrot Downloader - Download & Play videos from Facebook, Instagram and other sources"
-publish_to: 'none'
+description: "Parrot Downloader - Download & Play videos from Facebook, Instagram, and other sources."
+publish_to: 'none' # This is a private app; do not publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.2.6 <4.0.0'
+  sdk: ">=3.2.6 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+
+  # UI and icons
   cupertino_icons: ^1.0.2
-  http: ^1.1.0
-  video_player: ^2.8.1
-  chewie: ^1.7.4
-  path_provider: ^2.1.1
-  permission_handler: ^11.0.1
-  dio: ^5.3.2
-  url_launcher: ^6.2.1
-  share_plus: ^7.2.1
-  flutter_downloader: ^1.11.5
-  path: ^1.8.3
-  cached_network_image: ^3.3.0
   flutter_spinkit: ^5.2.0
   fluttertoast: ^8.2.4
+  cached_network_image: ^3.3.0
+
+  # Download and file handling
+  dio: ^5.3.2
+  flutter_downloader: ^1.11.5
+  path_provider: ^2.1.1
+  path: ^1.8.3
+  permission_handler: ^11.0.1
+
+  # Video playback
+  video_player: ^2.8.1
+  chewie: ^1.7.4
+
+  # Sharing and browser
+  share_plus: ^7.2.1
+  url_launcher: ^6.2.1
+
+  # HTTP
+  http: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -32,15 +42,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  
+
   assets:
     - assets/images/
     - assets/icons/
-  
+
   fonts:
     - family: Roboto
       fonts:
-        - asset: fonts/Roboto-Regular.ttf
-        - asset: fonts/Roboto-Bold.ttf
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
           weight: 700
-
